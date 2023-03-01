@@ -19,4 +19,8 @@ public class Person {
                 ", nick='" + nick + '\'' +
                 '}';
     }
+
+    public void init() {
+        System.out.println("init method called");
+    }
 }

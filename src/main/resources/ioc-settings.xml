@@ -10,6 +10,7 @@
           c:name="Abdullo Xayrulloyev"
           c:age="23"
           c:nick="Abdu4ik"
+          init-method="init"
     />
 
     <!--<bean id="baseDAO" class="dev.jlkeesh.springframeworkcore.beans.BaseDAO"

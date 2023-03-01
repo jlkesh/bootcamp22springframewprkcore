@@ -11,5 +11,6 @@ import org.springframework.web.context.annotation.ApplicationScope;
 @PropertySource("classpath:application.properties")
 */
 @ImportResource("classpath:ioc-settings.xml")
+@ComponentScan("dev.jlkeesh.springframeworkcore")
 public class MYConfig2 {
 }
