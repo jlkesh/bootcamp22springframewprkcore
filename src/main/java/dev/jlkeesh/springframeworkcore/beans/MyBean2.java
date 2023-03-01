@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 public record MyBean2(MyBean myBean) {
 
     public void timeIs2(){
+
         myBean.timeIs();
     }
 }
