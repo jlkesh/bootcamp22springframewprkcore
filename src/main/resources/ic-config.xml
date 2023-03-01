@@ -1,13 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xmlns:p="http://www.springframework.org/schema/p"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="myBean" class="dev.jlkeesh.springframeworkcore.beans.MyBean" />
+    <bean id="myBean" class="dev.jlkeesh.springframeworkcore.beans.MyBean"/>
 
     <bean id="myBean2" class="dev.jlkeesh.springframeworkcore.beans.MyBean2">
-<!--        <constructor-arg name="myBean" ref="myBean" />-->
-        <property name="myBean" ref="myBean" />
+        <!--        <constructor-arg name="myBean" ref="myBean" />-->
+        <property name="myBean" ref="myBean"/>
     </bean>
+
+    <bean id="person" class="dev.jlkeesh.springframeworkcore.beans.Person">
+        <constructor-arg name="fullName" value="Elbek Xolmatov"/>
+        <constructor-arg name="age" value="19"/>
+        <constructor-arg name="cognomen">
+            <set>
+                <value>Placeholder</value>
+                <value>TroubleMaker</value>
+                <value>Sheengo</value>
+                <value>Dinosaur</value>
+                <value>Senior Javaloper</value>
+            </set>
+        </constructor-arg>
+        <constructor-arg name="cognomenWithOrder">
+            <map>
+                <entry key="1" value="TroubleMaker" />
+                <entry key="2" value="Sheengo" />
+                <entry key="3" value="Dinosaur" />
+                <entry key="4" value="Placeholder" />
+                <entry key="5" value="Senioras Javaloper" />
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <!--<bean id="person" class="dev.jlkeesh.springframeworkcore.beans.Person"
+          p:fullName="Madina Utkirbekova" p:age="19"
+          c:fullName="Nodira Shorahmedova" c:age="18"
+    />-->
 </beans>
