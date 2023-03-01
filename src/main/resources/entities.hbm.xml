@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="dev.jlkeesh.springframeworkcore.Book">
+        <id name="id">
+            <generator class="uuid" />
+        </id>
+        <property name="title" column="book_title" type="string" />
+        <property name="author" column="book_author" type="string" />
+    </class>
+</hibernate-mapping>
