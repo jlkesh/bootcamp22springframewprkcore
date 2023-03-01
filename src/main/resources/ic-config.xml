@@ -27,11 +27,11 @@
         </constructor-arg>
         <constructor-arg name="cognomenWithOrder">
             <map>
-                <entry key="1" value="TroubleMaker" />
-                <entry key="2" value="Sheengo" />
-                <entry key="3" value="Dinosaur" />
-                <entry key="4" value="Placeholder" />
-                <entry key="5" value="Senioras Javaloper" />
+                <entry key="1" value="TroubleMaker"/>
+                <entry key="2" value="Sheengo"/>
+                <entry key="3" value="Dinosaur"/>
+                <entry key="4" value="Placeholder"/>
+                <entry key="5" value="Senioras Javaloper"/>
             </map>
         </constructor-arg>
     </bean>
@@ -40,4 +40,24 @@
           p:fullName="Madina Utkirbekova" p:age="19"
           c:fullName="Nodira Shorahmedova" c:age="18"
     />-->
+
+    <bean id="employee" class="dev.jlkeesh.springframeworkcore.beans.Employee"
+          factory-method="getInstance"
+          init-method="init"
+          destroy-method="destroy"
+          lazy-init="true"
+    />
+   <!-- <bean id="a" class="dev.jlkeesh.springframeworkcore.beans.A" >
+        <constructor-arg name="b" ref="b">
+        </constructor-arg>
+    </bean>
+    <bean id="b" class="dev.jlkeesh.springframeworkcore.beans.B" c:a-ref="a"  lazy-init="true"/>-->
+    <bean id="userService" class="dev.jlkeesh.springframeworkcore.beans.UserService"  />
+    <bean id="bookService" class="dev.jlkeesh.springframeworkcore.beans.BookService" />
+
+
+    <bean id="controller" class="dev.jlkeesh.springframeworkcore.beans.Controller"
+        autowire="constructor" c:service-ref="bookService"
+          scope="prototype"
+    />
 </beans>
