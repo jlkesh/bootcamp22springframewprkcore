@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--<context:property-placeholder location="classpath:application.properties"/>-->
+
+    <bean id="person" class="dev.jlkeesh.springframeworkcore.beans.Person"
+          c:name="Abdullo Xayrulloyev"
+          c:age="23"
+          c:nick="Abdu4ik"
+    />
+
+    <!--<bean id="baseDAO" class="dev.jlkeesh.springframeworkcore.beans.BaseDAO"
+          c:url="${spring.datasource.url}"
+          c:user="${spring.datasource.user}"
+          c:password="${spring.datasource.password}"
+          c:database="${spring.datasource.database}"
+          c:schema="${spring.datasource.schema}"
+          c:driver="${spring.datasource.driver}"
+    />
+-->
+</beans>
